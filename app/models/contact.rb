@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
 #class Contact < ActiveRecord::Base   это должно было бы быть... и тогда можно + валидацию:
-#	vlaidate :email, presence: true
-#	vlaidate :message, presence: true
+	validates :email, presence: true
+	validates :message, presence: true
+#	vlaidate :message, presence: true :-)
 end
