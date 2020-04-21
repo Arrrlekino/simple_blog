@@ -9,8 +9,28 @@
 </p>
 <p>
 	<%= link_to 'Show', article_path(article) %> | 
-	<%= link_to 'Edit', edit_article_path(article) %> 
+	<%= link_to 'Edit', edit_article_path(article) %> |
+	<%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<li>
+
+      <div class="ui checkbox">
+        <input type="checkbox" data-id="<%= article.id %>"<%= article.title ? ' checked="checked"' : '' %>
+        <p>Not complete</p>
+      </div>
+
+    </li>
+    <li>
+
+      <div class="ui checkbox">
+        <input type="checkbox" data-id="<%= article.id %>"<%= article.title ? ' checked="checked"' : '' %>
+        <p>Complete! ;-)</p>
+      </div>
+
+    </li>
 
 </p>
+
+
+
 <hr />
 <% end %>
